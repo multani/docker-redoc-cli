@@ -19,6 +19,14 @@ This provides the [ReDoc CLI's `redoc-cli`](https://www.npmjs.com/package/redoc-
 
   Then open: http://localhost:8080
 
+* For those using Jenkins, use:
+
+  ```groovy
+  docker.image('multani/redoc-cli').inside {
+    sh 'redoc-cli bundle openapi-demo.yaml -o index.html'
+  }
+  ```
+
 
 For more information, run:
 
