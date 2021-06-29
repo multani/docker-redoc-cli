@@ -1,4 +1,4 @@
-FROM node:15.14.0-alpine3.13
+FROM node:16.3.0-alpine3.13
 
 COPY package.json yarn.lock /js/
 RUN cd /js; npm install
