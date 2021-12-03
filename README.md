@@ -1,3 +1,24 @@
+# ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️
+
+Don't use me anymore, there's now an official [Docker image to run ReDoc CLI](https://github.com/Redocly/redoc/pkgs/container/redoc%2Fcli).
+
+To migrate, replace:
+
+```
+docker run --rm -v $PWD:/src -w /src multani/redoc-cli bundle openapi-demo.yaml -o index.html
+```
+
+by:
+
+```
+docker run --rm -v $PWD:/src -w /src ghcr.io/redocly/redoc/cli:v2.0.0-rc.58 bundle openapi-demo.yaml -o index.html
+```
+
+Or any other more recent image that you can find on https://github.com/Redocly/redoc/pkgs/container/redoc%2Fcli.
+
+
+---
+
 # `redoc-cli` as a container
 
 This provides the [ReDoc CLI's `redoc-cli`](https://www.npmjs.com/package/redoc-cli) as a Docker image.
